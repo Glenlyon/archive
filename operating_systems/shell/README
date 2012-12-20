@@ -1,0 +1,41 @@
+David Rusk
+
+CSC 360 Assignment 1 Part 2
+kapish UNIX shell
+
+This shell has built in commands cd and exit.
+
+Using "cd dir" will change the current directory to dir.  If dir is not in 
+the current directory or does not exist, kapish will give an error message 
+of the form: 
+"kapish: cd: dir: No such file or directory".
+If dir is a file, kapish instead gives an error message in the form:
+"kapish: cd: dir: Not a directory".
+
+Kapish can also run executable files by creating a child process which runs 
+execvp.  This allows executables which are on the path to be run with no 
+qualifiers.  For example, typing "ls -lat" will run ls with the specified 
+options.
+
+If kapish does not find an executable on the path, it will prepend
+"./" to the command name.  Therefore, to run kapish again from within
+kapish you could just type "kapish" rather than "./kapish".
+
+If the command foo, for instance, is still not found after checking
+locations on the path and in the current directory, then an error
+message is printed in the form: "kapish: foo: command not found".
+
+Pushing Control-C works as specified.  It will not kill kapish, but it
+can be used to kill child processes.
+
+There are no known bugs or memory leaks in kapish.  However, if a
+command that is not on the path or in the current directory is
+entered, Valgrind will erroneously say that there is a memory
+leak. Once you type "exit" or Control-D it will report that there are
+no memory leaks.  This oddity seems to happend because Valgrind
+reports too early; the memory is freed after the parent is done
+waiting for the child process to terminate.  It may be reporting as
+soon as the child terminates. The child allocates the memory, but the
+variable is declared in the parent and is later freed in the parent.
+
+I developed this assignment on my own.
