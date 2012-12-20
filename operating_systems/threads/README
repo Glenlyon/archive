@@ -1,0 +1,12 @@
+This assignment was an introduction to the pthread library.  It
+implements a simple producer/consumer style problem.
+
+The program creates two threads: one produces data and the other
+consumes data.  The data being produced and consumed are random
+integers in the range 0 to 99.
+
+A total of 100 integers are produced.  After each integer is produced
+there is a 50% chance for the producer to sleep for 1 second and 50%
+chance it will sleep for 4 seconds.  After the consumer thread
+consumes each integer it has a 50% chance of sleeping for 1 second and
+50% chance of sleeping for 5 seconds.
