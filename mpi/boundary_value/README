@@ -1,0 +1,6 @@
+This is a serial implementation of the boundary value problem.
+
+In order to compile when using math.h, need to add -lm.  This is
+because math.h has to be explicitly linked.
+
+gcc -Wall boundary_value.c -o bv -lm
