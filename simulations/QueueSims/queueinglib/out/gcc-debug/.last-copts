@@ -1,0 +1,1 @@
+-g -Wall -fPIC  -fno-stack-protector -DHAVE_SWAPCONTEXT  -DHAVE_PCAP -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER -DQUEUEING_EXPORT -I. -Igcc-debug -Igcc-debug/out -Igcc-debug/out/gcc-debug -Igcc-debug/out/gcc-release -Itemplates -Itemplates/queueing -I/home/drusk/devel/omnetpp-4.3.1/include

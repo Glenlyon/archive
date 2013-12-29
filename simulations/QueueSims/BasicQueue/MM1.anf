@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/BasicQueue/results/MM1-*.vec"/>
+    <inputs name="/BasicQueue/results/MM1-*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="mm1">
+      <items xsi:type="scave:Add" filterPattern="MM1-*"/>
+    </datasets>
+  </datasets>
+  <chartSheets/>
+</scave:Analysis>
