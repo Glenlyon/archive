@@ -1,7 +1,7 @@
 import os
 import unittest
 
-from hamcrest import assert_that, equal_to, none, contains
+from hamcrest import assert_that, equal_to, contains
 
 import zngr_solver
 
